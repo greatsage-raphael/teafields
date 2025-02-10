@@ -2,6 +2,7 @@
 
 import { useSearchParams } from 'next/navigation';
 import Results from '@/components/results';
+import { Suspense } from 'react';
 
 export interface PersonalityType {
   title: string;
@@ -228,10 +229,12 @@ export default function QuizPage() {
   };
 
   return (
+    <Suspense>
     <div className="bg-black text-white">
       <Results
         resultType={`${topThreeSins.first}, ${topThreeSins.second}, ${topThreeSins.third}`}
       />
     </div>
+    </Suspense>
   );
 }
