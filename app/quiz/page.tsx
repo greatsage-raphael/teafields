@@ -229,7 +229,7 @@ export default function QuizPage() {
   };
 
   return (
-    <Suspense>
+    <Suspense fallback={<div className="bg-black text-white">Loading...</div>}>
     <div className="bg-black text-white">
       <Results
         resultType={`${topThreeSins.first}, ${topThreeSins.second}, ${topThreeSins.third}`}
