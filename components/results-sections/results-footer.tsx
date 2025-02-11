@@ -19,7 +19,7 @@ export function ResultsFooter({ resultType, primarySin, secondarySin, thirdSin }
     }
   }
 
-  const baseUrl = "http://localhost:3000"
+  const baseUrl = "https://teafields.vercel.app/"
   const resultUrl = `${baseUrl}/quiz/?sin=${primarySin?.toLowerCase()  || ''}&sin2=${secondarySin?.toLowerCase() || ''}&sin3=${thirdSin?.toLowerCase() || ''}`
 
   return (
